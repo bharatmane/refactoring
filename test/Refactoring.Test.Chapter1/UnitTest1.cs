@@ -8,6 +8,7 @@ namespace Refactoring.Test.Chapter1
         [SetUp]
         public void Setup()
         {
+             
         }
 
         [Test]
