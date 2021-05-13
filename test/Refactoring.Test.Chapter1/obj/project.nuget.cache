@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uLgd6OqGZJ5u+MVkyw9q4OGW6mb+D2HPKgV0txEMTzcQn2C71Soo6NSCRn6/b4bHo+L/DUlKyqHmPO7DZzaIjw==",
+  "dgSpecHash": "9xQx0TEfv7SWf2qkL598o9EZRDKGiER+dydu0/Y+f59r/C2xXEXJVeFb9ywH5l0DOD1Mv0A1EheNJ9it2TBhzA==",
   "success": true,
-  "projectFilePath": "E:\\Software Craftsmanship\\refactoring\\test\\Chapter1\\Chapter1.csproj",
+  "projectFilePath": "E:\\Software Craftsmanship\\refactoring\\test\\Refactoring.Test.Chapter1\\Refactoring.Test.Chapter1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bhara\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\bhara\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

@@ -4,10 +4,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
 
     <IsPackable>false</IsPackable>
-
-    <RootNamespace>Refactoring.Test</RootNamespace>
-
-    <AssemblyName>Refactoring.Test</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

@@ -4636,11 +4636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Software Craftsmanship\\refactoring\\test\\Chapter1\\Chapter1.csproj",
-      "projectName": "Refactoring.Test",
-      "projectPath": "E:\\Software Craftsmanship\\refactoring\\test\\Chapter1\\Chapter1.csproj",
+      "projectUniqueName": "E:\\Software Craftsmanship\\refactoring\\test\\Refactoring.Test.Chapter1\\Refactoring.Test.Chapter1.csproj",
+      "projectName": "Refactoring.Test.Chapter1",
+      "projectPath": "E:\\Software Craftsmanship\\refactoring\\test\\Refactoring.Test.Chapter1\\Refactoring.Test.Chapter1.csproj",
       "packagesPath": "C:\\Users\\bhara\\.nuget\\packages\\",
-      "outputPath": "E:\\Software Craftsmanship\\refactoring\\test\\Chapter1\\obj\\",
+      "outputPath": "E:\\Software Craftsmanship\\refactoring\\test\\Refactoring.Test.Chapter1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bhara\\AppData\\Roaming\\NuGet\\NuGet.Config",
