@@ -18,7 +18,7 @@ build:
     project: Refactoring.sln
     verbosity: minimal
 after_build:
-    - dotnet sonarscanner end /d:"sonar.login=$env:my_sonartoken_encrypted"
+    - dotnet sonarscanner end /d:sonar.login="c1ab706a48b2ba382859e6a3a438a63ebd9b149a"
 notifications:
 - provider: Email
   to:
