@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Chapter1
+namespace Refactoring.Chapter1
 {
     public class Movie
     {

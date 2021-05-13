@@ -1,4 +1,4 @@
-﻿namespace Chapter1
+﻿namespace Refactoring.Chapter1
 {
     public class Rental
     {
