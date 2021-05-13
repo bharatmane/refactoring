@@ -1,6 +1,6 @@
 version: 1.0.{build}
 image:
-  - macOS
+  - Visual Studio 2019 Preview
 branches:
   only:
     - main
