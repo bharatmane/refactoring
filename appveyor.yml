@@ -7,6 +7,8 @@ branches:
 environment:
   my_sonartoken_encrypted:
     secure: pG2bvULhAV4syIfBmSSFvs0ukqiNMasI5+QGC8MwpNoIwNvselOUQmkuiAJ848zb
+install:
+    - choco install "sonarscanner-msbuild-netcoreapp2.0" -y
 before_build:
     - dotnet restore Refactoring.sln
     - dotnet tool install -g dotnet-sonarscanner
