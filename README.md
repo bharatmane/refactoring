@@ -1,7 +1,7 @@
 # refactoring
 
 
-[![Build](https://github.com/bharatmane/refactoring/sonar-cloud/actions/workflows/build.yml/badge.svg)](https://github.com/bharatmane/sonar-cloud/actions/workflows/build.yml)
+[![Build](https://github.com/bharatmane/refactoring/actions/workflows/build.yml/badge.svg)](https://github.com/bharatmane/refactoring/actions/workflows/build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bharatmane_refactoring&metric=alert_status)](https://sonarcloud.io/dashboard?id=bharatmane_refactoring)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=bharatmane_refactoring&metric=bugs)](https://sonarcloud.io/dashboard?id=bharatmane_refactoring)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=bharatmane_refactoring&metric=code_smells)](https://sonarcloud.io/dashboard?id=bharatmane_refactoring)
