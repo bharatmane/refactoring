@@ -1,13 +1,16 @@
 # refactoring
 
-This is my attempt to understand and attempt the techniques that Martin Fowler beautifully crafted in his book 
-![Drag Racing](https://martinfowler.com/books/refact2.jpg) 
+This is my attempt to understand and practice the refactoring techniques that Martin Fowler beautifully crafted in his book 
+
+![Drag Racing](https://martinfowler.com/books/refact2.jpg) using c# 
+
 [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html). 
-This is just for my reference. In no way I claim this as my work, its all the efforts of Martin Fowler. So if you really want to learn deeper about refactoring , buy and read the book and use this repository just as a reference.
 
-If you are the publisher and think this repository should not be public, just write me an email at bharat.mane [at] gmail [dot] com and I will make it private.
+This is just for my reference. In no way I claim this as my work, it's all the efforts of Martin Fowler. So if you really want to learn deeper about refactoring, buy and read the book and use this repository just as a reference.
 
-Contributions: Issues, comments and pull requests are super welcome 😃
+If you are the publisher and think this repository should not be public, write me an email at bharat.mane [at] gmail [dot] com, and I will make it private.
+
+Contributions: Issues, comments, and pull requests are super welcome 😃
 
 
 [![Build](https://github.com/bharatmane/refactoring/actions/workflows/build.yml/badge.svg)](https://github.com/bharatmane/refactoring/actions/workflows/build.yml)
