@@ -1,4 +1,5 @@
 # refactoring
+>*The process of restructuring existing code or changing the factoring—without changing its behavior*
 
 This is my attempt to understand and practice the refactoring techniques that Martin Fowler beautifully crafted in his book 
 
@@ -30,4 +31,7 @@ Contributions: Issues, comments, and pull requests are super welcome 😃
 ## Techniques ##
 
 
-> Neglection accelerates the rot faster than any other factor. says the authors of the book "The Pragmatic Programmer"
+> "Neglection accelerates the rot faster than any other factor." says the authors of the book "The Pragmatic Programmer"
+> 
+
+
