@@ -2,7 +2,7 @@
 
 This is my attempt to understand and practice the refactoring techniques that Martin Fowler beautifully crafted in his book 
 
-![Drag Racing](https://martinfowler.com/books/refact2.jpg) using c# 
+![Drag Racing](https://martinfowler.com/books/refact2.jpg) 
 
 [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html). 
 
