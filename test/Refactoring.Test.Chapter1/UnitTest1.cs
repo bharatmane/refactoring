@@ -10,7 +10,7 @@ namespace Refactoring.Test.Chapter1
         { 
              
         }
-
+          
         [Test]
         public void Test1()
         {

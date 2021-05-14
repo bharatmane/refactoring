@@ -5,3 +5,7 @@
 /src/Chapter1/obj
 /.sonarqube/bin
 /.sonarqube
+/src/Chapter1/bin/Debug
+/test/Refactoring.Test.Chapter1/bin/Debug
+/test/Refactoring.Test.Chapter1/obj/Debug/net5.0
+/.vs/Refactoring/DesignTimeBuild
