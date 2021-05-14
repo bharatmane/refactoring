@@ -28,3 +28,6 @@ Contributions: Issues, comments, and pull requests are super welcome 😃
 - [License](#license)
 
 ## Techniques ##
+
+
+> Neglection accelerates the rot faster than any other factor. says the authors of the book "The Pragmatic Programmer"
