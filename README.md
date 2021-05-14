@@ -1,6 +1,6 @@
 # refactoring
 
-This is my attempt to understand and attempt the techniques that Martin Fowler beautifully crafted in his book [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html). I use it while learning and as quick reference. In no way I claim this as my work, its all the efforts of Martin Fowler. So if you really want to learn deeper about refactoring , buy and read the book and use this repository just as a reference.
+This is my attempt to understand and attempt the techniques that Martin Fowler beautifully crafted in his book [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html). This is just for my reference. In no way I claim this as my work, its all the efforts of Martin Fowler. So if you really want to learn deeper about refactoring , buy and read the book and use this repository just as a reference.
 
 If you are the publisher and think this repository should not be public, just write me an email at bharat.mane [at] gmail [dot] com and I will make it private.
 
