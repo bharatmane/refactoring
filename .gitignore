@@ -6,6 +6,6 @@
 /.sonarqube/bin
 /.sonarqube
 /src/Chapter1/bin/Debug
-/test/Refactoring.Test.Chapter1/bin/Debug
-/test/Refactoring.Test.Chapter1/obj/Debug/net5.0
+/test/Refactoring.Test.Chapter1/bin/
+/test/Refactoring.Test.Chapter1/obj/
 /.vs/Refactoring/DesignTimeBuild
