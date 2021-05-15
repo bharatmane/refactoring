@@ -48,8 +48,8 @@ Contributions: Issues, comments, and pull requests are super welcome 😃
 - [Techniques](#Techniques)
 - [License](#license)
 
-# Tests are your friends else you are in trouble #
->*Refactoring is **not** adding the behavior, but it is all about preserving it.*
+### Tests are your friends else you are in trouble ###
+>*Refactoring is **not** adding the behavior, but it is all about **preserving** it.*
 >
 
 In other words, it is changing the internal structure without changing the external behavior.
