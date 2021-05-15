@@ -33,24 +33,7 @@ namespace Refactoring.Chapter1
             String result = "Rental record for " + GetName() + "\n";
             foreach (Rental rental in rentals)
             {
-                double amount = 0;
-                switch (rental.GetMovie().GetPriceCode())
-                {
-                    case Movie.REGULAR:
-                        amount += 2;
-                        if (rental.GetDaysRented() > 2)
-                            amount += (rental.GetDaysRented() - 2) * 1.5;
-                        break;
-                    case Movie.NEW_RELEASE:
-                        amount += rental.GetDaysRented() * 3;
-                        break;
-                    case Movie.CHILDREN:
-                        amount += 1.5;
-                        if (rental.GetDaysRented() > 3)
-                            amount += (rental.GetDaysRented() - 3) * 1.5;
-                        break;
-                }
-
+                double amount = GetAmount(rental);
                 // add frequent renter points
                 frequentRenterPoints++;
                 // add bonus for a two day new release rental
@@ -67,6 +50,29 @@ namespace Refactoring.Chapter1
             result += "You earned " + frequentRenterPoints + " frequent renter points";
 
             return result;
+        }
+
+        private double GetAmount(Rental rental)
+        {
+            double amount = 0;
+            switch (rental.GetMovie().GetPriceCode())
+            {
+                case Movie.REGULAR:
+                    amount += 2;
+                    if (rental.GetDaysRented() > 2)
+                        amount += (rental.GetDaysRented() - 2) * 1.5;
+                    break;
+                case Movie.NEW_RELEASE:
+                    amount += rental.GetDaysRented() * 3;
+                    break;
+                case Movie.CHILDREN:
+                    amount += 1.5;
+                    if (rental.GetDaysRented() > 3)
+                        amount += (rental.GetDaysRented() - 3) * 1.5;
+                    break;
+            }
+
+            return amount;
         }
     }
 }
