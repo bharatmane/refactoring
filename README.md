@@ -11,11 +11,12 @@ They say, *"Attitudes are contagious. Are yours worth catching?"* If one person 
 
 When we code, we programmers are in a hurry chasing the solution. In doing so, we miss out on practices, patterns, principles, conventions, and much more. This haste costs us badly during the enhancements and maintenance. Time and again, we have seen the tiger team delivers with commendable pace in the first few months. Soon, they struggle to keep up with the pace as they start carrying the luggage. We call it in a fancy way "Technical Debt."
 
-Uncle Bob quotes in one of my all-time favorite book [Clean Code](https://www.amazon.in/Clean-Code-Robert-C-Martin/dp/8131773388).  "Clean CVode"
+Uncle Bob quotes in one of my all-time favorite book [Clean Code](https://www.amazon.in/Clean-Code-Robert-C-Martin/dp/8131773388).
 
 >"The only way to make the deadline — the only way to go fast — is to keep the code as clean as possible at all times."
 >
 
+Let's begin our journey...
 >**Continuous Care, Continuous Refactoring is the key for the maintainable code.**
 >
 
