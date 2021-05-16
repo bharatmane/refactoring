@@ -48,5 +48,7 @@ Contributions: Issues, comments, and pull requests are super welcome 😃
 
 In other words, it is changing the internal structure without changing the external behavior. Invest now, and be rest assured it will payback. While we refactor, a word of caution, remember that we are making changes to something that works just fine. Change always comes at a cost. There could be numerous ways we can break perfectly working code during refactoring. There is the only way that would guarantee the refactoring would not cause any trouble, and that is the first tip from Martin Fowler.
 
+![](.gitbook/assets/two-hats.png)
+
 > _1. Before you start refactoring, make sure you have a solid suite of tests._
 
