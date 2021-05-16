@@ -1,8 +1,4 @@
----
-description: Introduction
----
-
-# refactoring
+# Introduction
 
 > _The process of restructuring existing code or changing the factoring—without changing its behavior_
 
@@ -28,7 +24,7 @@ This is my attempt to understand and practice the refactoring techniques that Ma
 
 [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html).
 
-This is just for my reference. In no way do I claim this as my work; it's all the efforts of Martin Fowler. So if you really want to learn deeper about refactoring, buy and read the book and use this repository just as a reference.
+This is just for my reference. In no way do I claim this as my work; it is all the efforts of Martin Fowler. So if you really want to learn deeper about refactoring, buy and read the book and use this repository just as a reference.
 
 If you are the publisher and think this repository should not be public, write me an email at bharat.mane \[at\] gmail \[dot\] com, and I will make it private.
 
@@ -38,15 +34,17 @@ Contributions: Issues, comments, and pull requests are super welcome 😃
 
 ## Table of Contents \#\#
 
-* [Introduction](./#introduction)
-* [Techniques](./#Techniques)
-* [License](./#license)
+* [Introduction](docs.md#introduction)
+* [Techniques](docs.md#Techniques)
+* [License](docs.md#license)
 
 ### Tests are your friends else you are in trouble \#\#\#
 
 > _Refactoring is **not** adding the behavior, but it is all about **preserving** it._
 
 In other words, it is changing the internal structure without changing the external behavior. Invest now, and be rest assured it will payback. While we refactor, a word of caution, remember that we are making changes to something that works just fine. Change always comes at a cost. There could be numerous ways we can break perfectly working code during refactoring. There is the only way that would guarantee the refactoring would not cause any trouble, and that is the first tip from Martin Fowler.
+
+![The two-hat metaphor was conceived by Kent Beck.](.gitbook/assets/two-hats.png)
 
 > _1. Before you start refactoring, make sure you have a solid suite of tests._
 
