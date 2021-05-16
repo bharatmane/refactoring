@@ -2,7 +2,7 @@
 
 > _The process of restructuring existing code or changing the factoring—without changing its behavior_
 
-Software programmers spend most of the time either reading or writing the code. The amount of time spent on the former is substantially high compared to the latter. Another intresting fact about the average lifespan of a software program ranges from 6-8 years, and in some complex enterprise applications, it can even go beyond a decade. The ease with which one can maintain a software program is inversely proportional to its age and complexity. Studies have shown that over 90% of the cost spent on maintainability.
+Software programmers spend most of the time either reading or writing the code. The amount of time spent on the former is substantially high compared to the latter. Another interesting fact about the average lifespan of a software program ranges from 6-8 years, and in some complex enterprise applications, it can even go beyond a decade. The ease with which one can maintain a software program is inversely proportional to its age and complexity. Studies have shown that over 90% of the cost spent on maintainability.
 
 > "Neglection accelerates the rot faster than any other factor." says the authors of the book "The Pragmatic Programmer"
 
