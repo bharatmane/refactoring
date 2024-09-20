@@ -107,4 +107,24 @@ echo 'You got to trust me on this, I saved the world'
 {% endcode %}
 
 
+if (SelectedRow != null)
+{
+    var sirenReq = CreateTaskItemsArgsSirenReq(SelectedRow.Row);
+    var selectedInstr = GetSirENDil(sirenReq);
 
+    if (selectedInstr?.DeliveryInstructions?.Any() == true)
+    {
+        foreach (var instr in selectedInstr.DeliveryInstructions)
+        {
+            var attentionOf = instr.UltimateBeneficiary?.UltimateBeneficiaryAttentionOf;
+            string ultimateBeneficiaryAttnOf = attentionOf?.Any() == true ? string.Join(",", attentionOf) : string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(ultimateBeneficiaryAttnOf))
+            {
+                instr.UltimateBeneficiary.UltimateBeneficiaryAttentionOf = new string[] { ultimateBeneficiaryAttnOf };
+            }
+        }
+
+        SelectedRow[DeliveryInstruction] = selectedInstr;
+    }
+}
