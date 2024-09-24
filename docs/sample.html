@@ -28,3 +28,12 @@ To mitigate some of these challenges, particularly the manual and error-prone pr
 The script scans through all the project files (*.csproj) in a specified directory, looking for outdated assembly references, and automatically replaces them with the updated versions and paths. This eliminates the need for manual intervention, making the process far more efficient and reducing the likelihood of errors.
 
 Here’s an overview of the PowerShell script:
+
+
+Benefits of the PowerShell Script
+Automation: The script automates the tedious task of updating multiple project files, saving significant time and effort.
+Error Reduction: By automating the process, the risk of missing references or making mistakes is greatly reduced.
+Logging and Feedback: The script logs every file it processes and each replacement it makes, providing clear feedback during execution.
+Scalability: This approach can be easily extended to handle more complex updates or additional projects as needed.
+Next Steps: Onboarding to Train/Jenkins
+To further streamline our build process, we plan to onboard these legacy applications onto Jenkins pipelines. We will provide YAML files and updated build scripts to integrate this automated assembly management into our existing CI/CD infrastructure. This will ensure a smooth, automated process from code changes to release, bringing these legacy applications in line with modern development practices.
