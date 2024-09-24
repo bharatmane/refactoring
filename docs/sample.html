@@ -1,0 +1,32 @@
+Challenges in Upgrading Legacy .NET Applications
+In our organization, many of the .NET applications were developed over a decade ago, predominantly using .NET 4+ versions. Due to limited active development in certain cases, these applications have not been upgraded over the years, creating significant challenges in modernizing them to align with current practices and tools.
+
+Legacy Code and Outdated Frameworks
+The first major challenge we face is the reliance on older .NET versions. Many applications were built on versions that are now outdated, and upgrading to more recent .NET Core or .NET 6/7 versions presents compatibility issues. This is especially true for applications that have not seen any active development in recent years, meaning they still operate on frameworks that are over a decade old.
+
+Custom In-House Libraries and Third-Party Dependencies
+A number of our applications are tightly coupled with in-house reusable libraries that were developed internally. While these libraries served their purpose well in the past, they now pose a challenge when upgrading to modern platforms due to their lack of compatibility and ongoing maintenance. Additionally, many applications rely on third-party libraries such as Infragistics, which further complicates upgrades, particularly when the third-party controls themselves are no longer supported or compatible with the latest .NET versions.
+
+Outdated Release Processes
+Historically, our release process involved the use of VMS commands to deploy applications, with builds being distributed to a network location. While this process worked for its time, it lacks the automation and efficiency needed for modern CI/CD pipelines. In recent times, we've adopted Jenkins and train jobs for newer applications. However, many of the older applications still lack integration with these modern pipelines, making their upgrade and release a manual and error-prone process.
+
+Transition from DLL Commitments to NuGet Packages
+One of the biggest hurdles has been the shift in how we manage dependencies. For applications stored in repositories such as Stash/Green, it was common practice to commit reusable DLLs directly into the repository. However, with the introduction of NuGet package managers in recent years, this approach is no longer viable, as we now rely on package managers to handle dependencies. This change has created a significant challenge, particularly for our Jenkins-based CI/CD processes, where we need to reference these dependencies without committing the DLLs directly. Managing and resolving these references in an automated build environment has been a key obstacle.
+
+Complex Solutions with Multiple Projects
+Another significant challenge we face is the complexity of the solutions themselves. Many of our solutions contain multiple .NET projects—some, in fact, have over 30 projects in a single solution. Each project references multiple assemblies, and changes to version numbers or locations of these assemblies must be done manually. This process is mundane and error-prone, and if something goes wrong, identifying which reference was missed or incorrect is a time-consuming task. On top of that, the sheer repetitiveness of the task makes it incredibly unmotivating, further increasing the risk of errors and delays in the upgrade process.
+
+PowerShell Script Solution to Automate Assembly Updates
+To mitigate some of these challenges, particularly the manual and error-prone process of updating assembly references across multiple projects, we have developed a reusable PowerShell script that automates the task.
+
+The script scans through all the project files (*.csproj) in a specified directory, looking for outdated assembly references, and automatically replaces them with the updated versions and paths. This eliminates the need for manual intervention, making the process far more efficient and reducing the likelihood of errors.
+
+Here’s an overview of the PowerShell script:
+
+Benefits of the PowerShell Script
+Automation: The script automates the tedious task of updating multiple project files, saving significant time and effort.
+Error Reduction: By automating the process, the risk of missing references or making mistakes is greatly reduced.
+Logging and Feedback: The script logs every file it processes and each replacement it makes, providing clear feedback during execution.
+Scalability: This approach can be easily extended to handle more complex updates or additional projects as needed.
+Next Steps: Onboarding to Train/Jenkins
+To further streamline our build process, we plan to onboard these legacy applications onto Jenkins pipelines. We will provide YAML files and updated build scripts to integrate this automated assembly management into our existing CI/CD infrastructure. This will ensure a smooth, automated process from code changes to release, bringing these legacy applications in line with modern development practices.
