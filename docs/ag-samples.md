@@ -89,53 +89,55 @@ const CitySalesCustomAggregationGrid = () => {
     { city: 'New York', region: 'Eastern', sales: 90 }
   ]);
 
-  const customAggregation = (params) => {
+  const customAggregationNYLA = (params) => {
   let newYorkLosAngelesSum = 0;
+
+  // Iterate through the values and sum up for New York and Los Angeles
+  params.values.forEach((value) => {
+    if (value.city === 'New York' || value.city === 'Los Angeles') {
+      newYorkLosAngelesSum += value.sales;
+    }
+  });
+
+  return newYorkLosAngelesSum;
+};
+
+const customAggregationChicago = (params) => {
   let chicagoSum = 0;
 
-  // Check if childrenAfterGroup is available for original rows
-  if (params.rowNode.childrenAfterGroup) {
-    params.rowNode.childrenAfterGroup.forEach((childNode) => {
-      const value = childNode.data; // Get the original row data
-      if (value.city === 'New York' || value.city === 'Los Angeles') {
-        newYorkLosAngelesSum += value.sales;
-      } else if (value.city === 'Chicago') {
-        chicagoSum += value.sales;
-      }
-    });
-  } else {
-    // Fallback if no child nodes are present
-    params.values.forEach((value) => {
-      if (value.city === 'New York' || value.city === 'Los Angeles') {
-        newYorkLosAngelesSum += value.sales;
-      } else if (value.city === 'Chicago') {
-        chicagoSum += value.sales;
-      }
-    });
-  }
+  // Iterate through the values and sum up for Chicago
+  params.values.forEach((value) => {
+    if (value.city === 'Chicago') {
+      chicagoSum += value.sales;
+    }
+  });
 
-  return {
-    newYorkLosAngelesSum,
-    chicagoSum,
-  };
+  return chicagoSum;
 };
 
 
+
   const [columnDefs] = useState([
-    { headerName: 'City', field: 'city', pivot: true }, // Pivot on city
-    { headerName: 'Region', field: 'region', pivot: true }, // Pivot on region
-    { 
-      headerName: 'Sales for NY/LA', 
-      field: 'sales', 
-      aggFunc: customAggregation, // Use custom aggregation function
-      valueGetter: (params) => params.data ? params.data.newYorkLosAngelesSum : 0 // Display sum for New York and Los Angeles
-    },
-    { 
-      headerName: 'Sales for Chicago', 
-      field: 'sales', 
-      aggFunc: customAggregation, // Use custom aggregation function
-      valueGetter: (params) => params.data ? params.data.chicagoSum : 0 // Display sum for Chicago
-    }
+   {
+    headerName: 'City', 
+    field: 'city', 
+    pivot: true // Pivot on city
+  },
+  {
+    headerName: 'Region', 
+    field: 'region', 
+    pivot: true // Pivot on region
+  },
+  {
+    headerName: 'Sales for NY/LA',
+    field: 'sales',
+    aggFunc: customAggregationNYLA, // Custom aggregation function for NY/LA
+  },
+  {
+    headerName: 'Sales for Chicago',
+    field: 'sales',
+    aggFunc: customAggregationChicago, // Custom aggregation function for Chicago
+  }
   ]);
 
   const defaultColDef = {
