@@ -92,12 +92,15 @@ const CitySalesCustomAggregationGrid = () => {
   const customAggregationNYLA = (params) => {
   let newYorkLosAngelesSum = 0;
 
-  // Iterate through the values and sum up for New York and Los Angeles
-  params.values.forEach((value) => {
-    if (value.city === 'New York' || value.city === 'Los Angeles') {
-      newYorkLosAngelesSum += value.sales;
-    }
-  });
+  // Access the original row data
+  if (params.node.allLeafChildren) {
+    params.node.allLeafChildren.forEach((childNode) => {
+      const value = childNode.data; // Original row data
+      if (value.city === 'New York' || value.city === 'Los Angeles') {
+        newYorkLosAngelesSum += value.sales;
+      }
+    });
+  }
 
   return newYorkLosAngelesSum;
 };
@@ -105,12 +108,15 @@ const CitySalesCustomAggregationGrid = () => {
 const customAggregationChicago = (params) => {
   let chicagoSum = 0;
 
-  // Iterate through the values and sum up for Chicago
-  params.values.forEach((value) => {
-    if (value.city === 'Chicago') {
-      chicagoSum += value.sales;
-    }
-  });
+  // Access the original row data
+  if (params.node.allLeafChildren) {
+    params.node.allLeafChildren.forEach((childNode) => {
+      const value = childNode.data; // Original row data
+      if (value.city === 'Chicago') {
+        chicagoSum += value.sales;
+      }
+    });
+  }
 
   return chicagoSum;
 };
