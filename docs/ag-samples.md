@@ -165,6 +165,46 @@ const customAggregationChicago = (params) => {
   );
 };
 
+{
+    headerName: 'City', 
+    field: 'city', 
+    rowGroup: true, // Group by city to aggregate dynamically
+    hide: true // Hide the city column in the main grid, as it will be displayed as a group
+  },
+  {
+    headerName: 'Total Sales',
+    field: 'sales',
+    aggFunc: 'sum', // Aggregate sales per city
+  },
+  {
+    headerName: 'Sales for NY+LA',
+    field: 'sales',
+    valueGetter: (params) => {
+      if (params.node.group && (params.node.key === 'New York' || params.node.key === 'Los Angeles')) {
+        return params.node.aggData ? params.node.aggData.sales : 0;
+      }
+      return 0;
+    },
+  },
+  {
+    headerName: 'Sales for Chicago',
+    field: 'sales',
+    valueGetter: (params) => {
+      if (params.node.group && params.node.key === 'Chicago') {
+        return params.node.aggData ? params.node.aggData.sales : 0;
+      }
+      return 0;
+    },
+  },
+
+
+<AgGridReact
+        rowData={rowData} // Pass in streamed data directly
+        columnDefs={columnDefs}
+        defaultColDef={defaultColDef}
+        groupIncludeFooter={true} // Include footer for groups to show aggregated totals
+        animateRows={true} // Smoothly update rows as new data is streamed in
+      />
 export default CitySalesCustomAggregationGrid;
 ```
 
