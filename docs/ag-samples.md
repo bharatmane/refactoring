@@ -90,24 +90,36 @@ const CitySalesCustomAggregationGrid = () => {
   ]);
 
   const customAggregation = (params) => {
-    let newYorkLosAngelesSum = 0;
-    let chicagoSum = 0;
+  let newYorkLosAngelesSum = 0;
+  let chicagoSum = 0;
 
-    // Iterate through all values being aggregated
-    params.values.forEach(value => {
+  // Check if childrenAfterGroup is available for original rows
+  if (params.rowNode.childrenAfterGroup) {
+    params.rowNode.childrenAfterGroup.forEach((childNode) => {
+      const value = childNode.data; // Get the original row data
       if (value.city === 'New York' || value.city === 'Los Angeles') {
         newYorkLosAngelesSum += value.sales;
       } else if (value.city === 'Chicago') {
         chicagoSum += value.sales;
       }
     });
+  } else {
+    // Fallback if no child nodes are present
+    params.values.forEach((value) => {
+      if (value.city === 'New York' || value.city === 'Los Angeles') {
+        newYorkLosAngelesSum += value.sales;
+      } else if (value.city === 'Chicago') {
+        chicagoSum += value.sales;
+      }
+    });
+  }
 
-    // Return an object with separate sums for different cities
-    return {
-      newYorkLosAngelesSum,
-      chicagoSum,
-    };
+  return {
+    newYorkLosAngelesSum,
+    chicagoSum,
   };
+};
+
 
   const [columnDefs] = useState([
     { headerName: 'City', field: 'city', pivot: true }, // Pivot on city
