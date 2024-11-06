@@ -1,0 +1,58 @@
+static void Main(string[] args)
+{
+    var sql = string.Empty;
+    var fileNameToRead = string.Empty;
+    var fileNameToSave = string.Empty;
+
+    for (var a = 0; a < args.Length; a++)
+    {
+        var sValue = args[a];
+        switch (sValue)
+        {
+            case "-sql":
+                sql = SanitizeSql(args[a + 1]); // Sanitize the SQL query
+                break;
+            case "-fileNameToRead":
+                fileNameToRead = args[a + 1];
+                break;
+            case "-fileNameToSave":
+                fileNameToSave = args[a + 1];
+                break;
+        }
+    }
+
+    var result = ReadExcel(fileNameToRead, fileNameToSave, sql, ReadExcelMode.ACE) ??
+                 ReadExcel(fileNameToRead, fileNameToSave, sql, ReadExcelMode.JET);
+
+    if (string.IsNullOrEmpty(fileNameToSave)) return;
+
+    var ds = new DataSet();
+    ds.Tables.Add(result);
+    result.TableName = Path.GetFileNameWithoutExtension(fileNameToSave);
+    ds.WriteXml(fileNameToSave);
+    var schemaFileName = Path.ChangeExtension(fileNameToSave, ".xsd");
+    ds.WriteXmlSchema(schemaFileName);
+}
+
+private static string SanitizeSql(string inputSql)
+{
+    // Example of basic sanitization
+    // Disallow certain dangerous characters
+    string[] forbiddenCharacters = { ";", "--", "'", "\"" };
+    
+    foreach (var forbiddenChar in forbiddenCharacters)
+    {
+        if (inputSql.Contains(forbiddenChar))
+        {
+            throw new ArgumentException("Invalid SQL query. Potentially unsafe characters detected.");
+        }
+    }
+
+    // Optional: Ensure the SQL query is a read-only operation
+    if (!inputSql.TrimStart().StartsWith("SELECT", StringComparison.OrdinalIgnoreCase))
+    {
+        throw new ArgumentException("Only SELECT queries are allowed.");
+    }
+
+    return inputSql;
+}
