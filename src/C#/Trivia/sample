@@ -60,3 +60,6 @@ private static string SanitizeSql(string inputSql)
 
 var sanitizedEnvironmentName = Regex.Replace(environmentName, @"[^a-zA-Z0-9_\-]", ""); // Only allow alphanumeric and underscore
 LogLocation = Path.Combine(path, $"Performance_{sanitizedEnvironmentName}");
+
+
+var safeContent = Regex.Replace(content, @"[^a-zA-Z0-9_\-\.]", "");
