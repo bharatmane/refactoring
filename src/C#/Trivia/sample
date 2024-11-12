@@ -63,3 +63,16 @@ LogLocation = Path.Combine(path, $"Performance_{sanitizedEnvironmentName}");
 
 
 var safeContent = Regex.Replace(content, @"[^a-zA-Z0-9_\-\.]", "");
+
+
+
+@mixin hover-focus($color: null, $background: null) {
+  &:hover, &:focus {
+    @if $color {
+      color: $color;
+    }
+    @if $background {
+      background: $background;
+    }
+  }
+}
